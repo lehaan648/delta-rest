@@ -4,6 +4,7 @@ phases:
   post_build:
     commands:
       - mvn verify
+artifacts:
   files:
     - '**/*.jar'
   base-directory: 'target'
