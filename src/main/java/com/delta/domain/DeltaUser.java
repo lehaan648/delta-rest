@@ -1,4 +1,4 @@
-package com.eds.domain;
+package com.delta.domain;
 
 import javax.validation.constraints.NotNull;
 
