@@ -1,10 +1,9 @@
-version: 0.2
+version: 0.1
 
 phases:
   post_build:
     commands:
       - mvn verify
-artifacts:
   files:
     - '**/*.jar'
   base-directory: 'target'
