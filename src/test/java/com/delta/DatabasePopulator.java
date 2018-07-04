@@ -18,10 +18,10 @@ public class DatabasePopulator {
 
         try {
             PathMatchingResourcePatternResolver loader = new PathMatchingResourcePatternResolver();
-            Resource[] resources = loader.getResources("classpath:/sql/tests/*.sql");
+            Resource[] resources = loader.getResources("classpath:/sql/*.sql");
 
             for (Resource resource : resources) {
-                ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator(new ClassPathResource("sql/tests/" + resource.getFilename()));
+                ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator(new ClassPathResource("sql/" + resource.getFilename()));
                 databasePopulator.execute(jdbcTemplate.getDataSource());
             }
         } catch (IOException e){
