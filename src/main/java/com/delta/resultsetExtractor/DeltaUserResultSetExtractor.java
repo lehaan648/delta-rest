@@ -1,6 +1,6 @@
-package com.eds.resultsetExtractor;
+package com.delta.resultsetExtractor;
 
-import com.eds.domain.DeltaUser;
+import com.delta.domain.DeltaUser;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 

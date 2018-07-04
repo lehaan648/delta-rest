@@ -1,7 +1,8 @@
-package com.eds.repository;
+package com.delta.repository;
 
-import com.eds.DatabasePopulator;
-import com.eds.domain.DeltaUser;
+import com.delta.DatabasePopulator;
+import com.delta.domain.DeltaUser;
+import com.delta.form.LoginForm;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +24,6 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest
 @ActiveProfiles("test")
 @AutoConfigureMockMvc
-
 public class DeltaUserRepositoryTest extends DatabasePopulator {
 
     @Autowired
@@ -35,8 +35,13 @@ public class DeltaUserRepositoryTest extends DatabasePopulator {
     }
 
     @Test
-    public void getTotalRecords(){
-        List<DeltaUser> list = deltaUserRepository.getAllusers();
-        assertEquals(list.size(), 4);
+    public void getUserByUsernameAndPassword() {
+        LoginForm loginForm = new LoginForm();
+        loginForm.setUsername("udit");
+        loginForm.setPassword("abcd");
+        DeltaUser deltaUser = deltaUserRepository.getUserByUsernameAndPassword(loginForm);
+        assertEquals(deltaUser.getFirstName(), "udit");
+        assertEquals(deltaUser.getLastName(), "shah");
+        assertEquals(deltaUser.getDefaultScriptId(), new Integer(1));
     }
 }
