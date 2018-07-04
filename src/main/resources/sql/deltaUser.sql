@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS deltaUser;
 
 CREATE TABLE deltaUser (
-    firstName NVARCHAR(255),
-    lastName NVARCHAR(255),
-    username NVARCHAR(255) PRIMARY KEY,
-    password NVARCHAR(255),
+    firstName nvarchar(255),
+    lastName nvarchar(255),
+    username nvarchar(255),
+    password nvarchar(255),
     defaultScriptId INT DEFAULT 1
 );
 
