@@ -51,7 +51,7 @@ public abstract class BaseControllerIT extends DatabasePopulator{
         form.setUsername("udit");
         form.setPassword("abcd");
         HttpEntity<LoginForm> httpEntity = new HttpEntity<LoginForm>(form);
-        ResponseEntity<String> response = template.postForEntity(base.toString() + "login",
+        ResponseEntity<String> response = template.postForEntity(base.toString() + "/login",
                 httpEntity, String.class);
 
         JSONObject jsonObject = new JSONObject(response.getBody());
