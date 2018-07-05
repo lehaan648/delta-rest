@@ -19,7 +19,7 @@ public class DeltaUserRepository {
 
     public DeltaUser getUserByUsernameAndPassword(LoginForm loginForm) {
         loginForm.setPassword(DigestUtils.sha1Hex(loginForm.getPassword()));
-        String query = "SELECT * FROM deltaUser WHERE username = :username AND password = :password";
+        String query = "SELECT * FROM test WHERE username = :username AND password = :password";
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("username", loginForm.getUsername());
         params.addValue("password", loginForm.getPassword());
