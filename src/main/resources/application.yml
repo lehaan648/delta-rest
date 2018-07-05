@@ -9,7 +9,7 @@ spring:
     url: ${JDBC_URL:jdbcurl}
     password: ${JDBC_PASSWORD:jdbcpassword}
     username: ${JDBC_USERNAME:username}
-    driverClassName: ${JDBC_DRIVERCLASSNAME:org.h2.Driver}
+    driverClassName: ${JDBC_DRIVERCLASSNAME:com.microsoft.sqlserver.jdbc.SQLServerDriver}
     hikari:
         minimum-idle: 1
         maximum-pool-size: ${JDBC_POOLSIZE:10}

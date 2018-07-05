@@ -30,7 +30,12 @@ public class DeltaUserRepositoryTest extends DatabasePopulator {
     @Autowired
     DeltaUserRepository deltaUserRepository;
 
-    @Before
+    @Test
+    public void hello() {
+        System.out.println("Hello world");
+    }
+
+    /* @Before
     public void setup() {
         List<String> sqlFiles = new ArrayList<>();
         sqlFiles.add("sql/deltaUser.sql");
@@ -46,5 +51,5 @@ public class DeltaUserRepositoryTest extends DatabasePopulator {
         assertEquals(deltaUser.getFirstName(), "udit");
         assertEquals(deltaUser.getLastName(), "shah");
         assertEquals(deltaUser.getDefaultScriptId(), new Integer(1));
-    }
+    }*/
 }
