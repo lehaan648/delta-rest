@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
 import java.io.IOException;
@@ -13,7 +12,7 @@ import java.util.List;
 public class DatabasePopulator {
 
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    org.springframework.jdbc.core.JdbcTemplate jdbcTemplate;
 
     public void createDatabase() {
 
