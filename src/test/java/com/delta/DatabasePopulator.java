@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
 import java.io.IOException;
+import java.util.List;
 
 public class DatabasePopulator {
 
@@ -29,7 +30,7 @@ public class DatabasePopulator {
         }
     }
 
-    public void createDatabase(String[] sqlFiles) {
+    public void createDatabase(List<String> sqlFiles) {
         for(String file: sqlFiles){
             Resource resource = new ClassPathResource(file);
             ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator(resource);

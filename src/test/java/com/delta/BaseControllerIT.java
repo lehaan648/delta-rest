@@ -10,7 +10,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.URL;
@@ -23,9 +22,6 @@ public abstract class BaseControllerIT extends DatabasePopulator{
 
     @Autowired
     private TestRestTemplate template;
-
-    @Autowired
-    JdbcTemplate jdbcTemplate;
 
     protected URL base;
     public static HttpHeaders headers;
